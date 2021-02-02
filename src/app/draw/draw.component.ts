@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, HostListener, OnInit, ViewChild } from '@angular/core';
+import { SocketWebServiceService } from '../socket-web-service.service';
 
 @Component({
   selector: 'app-draw',
@@ -31,7 +32,12 @@ export class DrawComponent implements OnInit, AfterViewInit {
     }
   }
 
-  constructor() { }
+  constructor(private socketWebServiceService: SocketWebServiceService) {
+    socketWebServiceService.callback.subscribe(res => {
+      const { prevPos } = res;
+      this.writeSingle(prevPos, false);
+    });
+  }
 
   ngOnInit(): void {
   }
@@ -66,11 +72,9 @@ export class DrawComponent implements OnInit, AfterViewInit {
       const prevPost = this.points[this.points.length - 1];
       const currentPos = this.points[this.points.length - 2];
       this.drawOnCanvas(prevPost, currentPos);
-      /*
       if (emit) {
-        this.callback.emit({ prevPost, currentPos });
+        this.socketWebServiceService.emitEvent({ prevPos });
       }
-      */
     }
   }
 
