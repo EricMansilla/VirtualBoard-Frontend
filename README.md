@@ -1,27 +1,14 @@
 # VirtualBoardFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
+Project made to practice development using web sockets, with backend in node.js and frontend in Angular.
 
-## Development server
+### To run this project:
+- Download this frontend.
+- Download the [backend](https://github.com/EricMansilla/Virtual-Board-Backend).
+- Run `npm install` on both projects.
+- Run `npm start` on both projects.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Test the app in 2 different browsers:
+- Open `localhost:4200` in a browser (for example, Chrome).
+- Open `localhost:4200` in another browser (for example, Firefox).
+- Check that what is drawn in one browser is reflected in the other and vice versa.
