@@ -4,7 +4,7 @@ Project made to practice development using web sockets, with backend in node.js 
 
 ### To run this project:
 - Download this frontend.
-- Download the [backend](https://github.com/EricMansilla/Virtual-Board-Backend).
+- Download the [backend](https://github.com/monica-00/Virtual-Board-Backend).
 - Run `npm install` on both projects.
 - Run `npm start` on both projects.
 
